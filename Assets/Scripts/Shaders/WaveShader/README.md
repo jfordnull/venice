@@ -41,7 +41,8 @@ $$
 T =
 \begin{bmatrix}
 1 - \sum_{i=1}^{n} D_{x,i}^2 \, s_i \sin f_i \\
-\sum_{i=1}^{n} D_{x,i} \, s_i \cos f_i \\ - \sum_{i=1}^{n} D_{x,i} D_{z,i} \, s_i \sin f_i
+\sum_{i=1}^{n} D_{x,i} \, s_i \cos f_i \\ 
+{-} \sum_{i=1}^{n} D_{x,i} D_{z,i} \, s_i \sin f_i
 \end{bmatrix}
 $$
 
