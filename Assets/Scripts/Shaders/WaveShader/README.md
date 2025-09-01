@@ -4,7 +4,7 @@ A shader graph implementation of this catlike coding tutorial: https://catlikeco
 
 From catlike coding: "Gerstner waves are named after František Josef Gerstner, who discovered them. They're also known as trochoidal waves, named after their shape, or periodic surface gravity waves, which describes their physical nature."
 
-For our vertex displacement, we accumulate three Gerstner waves moving in slightly different directions. Details for how these functions are derived are included in the doc above but we eventually arrive at:
+For our vertex displacement, we accumulate three Gerstner waves moving in slightly different directions along the x,z plane. Details for how these functions are derived are included in the doc above but we eventually arrive at:
 
 ### Phase function f (ith wave):
 
@@ -25,9 +25,9 @@ c = How fast the wave moves (g is our gravity constant)
 $$
 P =
 \begin{bmatrix}
-x + \sum_{i=1}^{n} D_{x,i} \, a_i \cos f_i \\
+x + \sum_{i=1}^{n} D_{x,i} \ a_i \cos f_i \\
 \sum_{i=1}^{n} a_i \sin f_i \\
-z + \sum_{i=1}^{n} D_{z,i} \, a_i \cos f_i
+z + \sum_{i=1}^{n} D_{z,i} \ a_i \cos f_i
 \end{bmatrix}
 $$
 
@@ -43,8 +43,10 @@ T =
 1 - \sum_{i=1}^{n} D_{x,i}^2 \, s_i \sin f_i \\
 \sum_{i=1}^{n} D_{x,i} \, s_i \cos f_i \\
 - \sum_{i=1}^{n} D_{x,i} D_{z,i} \, s_i \sin f_i
-\end{bmatrix},
-\quad
+\end{bmatrix}
+$$
+
+$$
 B =
 \begin{bmatrix}
 - \sum_{i=1}^{n} D_{x,i} D_{z,i} \, s_i \sin f_i \\
