@@ -44,7 +44,7 @@ inline float3 AccumulateWave(
 }
 
 // Shader Graph entry point: sums three Gerstner waves and outputs displacement & normal in object space.
-inline void GerstnerWaves(
+inline void GerstnerWaves_float(
     float4 WaveA,
     float4 WaveB,
     float4 WaveC,
